@@ -1,11 +1,10 @@
-# Social / academic links (navbar, about page, footer). All confirmed by Marcelo.
+# Social / academic links (rendered by jekyll-socials on the About page).
+# Keys MUST match the plugin's exact names, or the build fails.
 email: marcelot@upenn.edu
-orcid_id: 0000-0002-6165-9138
 scholar_userid: N-Z6jh8AAAAJ
-github_username: mdttorres
-researchgate_profile: Marcelo-Torres-8
+orcid_id: 0000-0002-6165-9138
+research_gate_profile: Marcelo-Torres-8
 linkedin_username: marcelo-der-torossian-torres-66122622
-# Custom links rendered on the About page (not standard al-folio social fields):
-#   Lab:      https://delafuentelab.seas.upenn.edu/
-#   Peptaris: https://www.peptaris.com/en
-#   NCBI:     https://www.ncbi.nlm.nih.gov/myncbi/marcelo.der%20torossian%20torres.1/bibliography/public/
+github_username: mdttorres
+# Custom links (Lab, Peptaris, NCBI) are rendered directly on the About page,
+# since jekyll-socials has no key for them.
