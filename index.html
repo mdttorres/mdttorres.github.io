@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcelo Der Torossian Torres — antibiotics, peptides &amp; AI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Spectral:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>/* ============================================================================
+   Marcelo Der Torossian Torres — academic site preview
+   Black-first theme with light/dark toggle. Restrained accent.
+   ============================================================================ */
+:root {
+  --bg:        #0a0a0b;
+  --bg-soft:   #111113;
+  --card:      #141417;
+  --card-2:    #1a1a1e;
+  --border:    #26262b;
+  --border-2:  #33333a;
+  --text:      #e9e9ec;
+  --text-2:    #b4b4bc;
+  --muted:     #7d7d88;
+  --accent:    #5bb2ff;
+  --accent-2:  #8fd0ff;
+  --accent-dim:#1a3a55;
+  --star:      #ffd166;
+  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --maxw: 880px;
+}
+[data-theme="light"] {
+  --bg:        #fbfbfc;
+  --bg-soft:   #f3f3f5;
+  --card:      #ffffff;
+  --card-2:    #f6f7f9;
+  --border:    #e4e4e9;
+  --border-2:  #d5d5dc;
+  --text:      #16161a;
+  --text-2:    #3c3c44;
+  --muted:     #6c6c78;
+  --accent:    #1f6feb;
+  --accent-2:  #1a5fd0;
+  --accent-dim:#d7e6ff;
+  --star:      #c68a00;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: var(--sans); font-size: 16.5px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 22px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-2); text-decoration: underline; text-underline-offset: 3px; }
+h1,h2,h3 { font-family: var(--serif); font-weight: 600; line-height: 1.2; letter-spacing: -0.01em; }
+
+/* progress bar */
+#progress { position: fixed; top: 0; left: 0; height: 2px; width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)); z-index: 100; }
+
+/* nav */
+nav { position: sticky; top: 0; z-index: 50;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--border); }
+nav .wrap { display: flex; align-items: center; gap: 20px; height: 60px; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 1.02rem; color: var(--text);
+  letter-spacing: .01em; margin-right: auto; }
+.brand:hover { text-decoration: none; color: var(--accent); }
+.navlinks { display: flex; gap: 20px; align-items: center; }
+.navlinks a { color: var(--text-2); font-size: .93rem; font-weight: 500; }
+.navlinks a:hover { color: var(--text); text-decoration: none; }
+.navlinks a.active { color: var(--accent); }
+.toggle { background: var(--card); border: 1px solid var(--border-2); color: var(--text-2);
+  width: 34px; height: 34px; border-radius: 8px; cursor: pointer; font-size: 15px;
+  display: grid; place-items: center; transition: .15s; }
+.toggle:hover { color: var(--text); border-color: var(--accent); }
+@media (max-width: 620px){ .navlinks a { display: none; } .navlinks a.mini { display: inline; } }
+
+/* hero */
+.hero { padding: 60px 0 34px; }
+.hero-grid { display: grid; grid-template-columns: 168px 1fr; gap: 34px; align-items: start; }
+@media (max-width: 620px){ .hero-grid { grid-template-columns: 1fr; gap: 22px; text-align: center; } }
+.avatar { width: 168px; height: 168px; border-radius: 16px; object-fit: cover;
+  border: 1px solid var(--border-2); background: var(--card); }
+@media (max-width: 620px){ .avatar { margin: 0 auto; width: 150px; height: 150px; } }
+.hero h1 { font-size: 2.15rem; margin: 0 0 4px; }
+.role { color: var(--accent); font-weight: 600; font-size: 1.04rem; }
+.affil { color: var(--text-2); font-size: .98rem; margin-top: 2px; }
+.bio { color: var(--text-2); margin-top: 16px; }
+.bio p { margin: 0 0 12px; }
+.links { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+@media (max-width: 620px){ .links { justify-content: center; } }
+.chip { display: inline-flex; align-items: center; gap: 7px; font-size: .86rem; font-weight: 500;
+  padding: 7px 13px; border: 1px solid var(--border-2); border-radius: 999px;
+  color: var(--text-2); background: var(--card); transition: .15s; }
+.chip:hover { color: var(--text); border-color: var(--accent); text-decoration: none;
+  transform: translateY(-1px); }
+.chip.ph { opacity: .6; border-style: dashed; }
+.chip i { color: var(--accent); }
+
+/* sections */
+section { padding: 34px 0; border-top: 1px solid var(--border); }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; margin: 0 0 20px; }
+.sec-head h2 { font-size: 1.5rem; margin: 0; }
+.sec-head .more { font-size: .9rem; font-weight: 500; }
+.kicker { text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; color: var(--muted);
+  font-family: var(--sans); font-weight: 600; }
+
+/* affiliations logo row */
+.logos { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.logo { flex: 1 1 auto; min-width: 150px; display: flex; align-items: center; gap: 11px;
+  padding: 14px 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--card);
+  color: var(--text-2); transition: .18s; }
+.logo:hover { color: var(--text); border-color: var(--accent); text-decoration: none;
+  background: var(--card-2); transform: translateY(-2px); }
+.logo svg { flex: 0 0 auto; opacity: .82; }
+.logo:hover svg { opacity: 1; }
+.logo .lg-name { font-family: var(--serif); font-weight: 600; font-size: .93rem; line-height: 1.15; }
+.logo .lg-sub { font-size: .72rem; color: var(--muted); }
+.logo.peptaris .pep-logo { display: flex; align-items: center; }
+.logo.peptaris .pep-logo svg { height: 30px; width: auto; display: block; }
+.logo .uni-logo { height: 30px; width: auto; max-width: 132px; object-fit: contain;
+  filter: brightness(0) invert(1); opacity: .80; transition: filter .18s, opacity .18s; }
+.logo:hover .uni-logo { filter: none; opacity: 1; }
+[data-theme="light"] .logo .uni-logo { filter: brightness(0); opacity: .72; }
+[data-theme="light"] .logo:hover .uni-logo { filter: none; opacity: 1; }
+
+/* news */
+.news { display: flex; flex-direction: column; gap: 2px; }
+.news-item { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 12px 0;
+  border-bottom: 1px dashed var(--border); }
+@media (max-width: 620px){ .news-item { grid-template-columns: 1fr; gap: 2px; } }
+.news-date { color: var(--muted); font-size: .84rem; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.news-body { color: var(--text-2); font-size: .96rem; }
+.draft { display: inline-block; font-size: .64rem; font-weight: 700; letter-spacing: .08em;
+  color: var(--star); border: 1px solid color-mix(in srgb, var(--star) 45%, transparent);
+  border-radius: 5px; padding: 1px 6px; margin-left: 8px; vertical-align: middle; }
+
+/* research themes */
+.themes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px){ .themes { grid-template-columns: 1fr; } }
+.theme { padding: 20px; border: 1px solid var(--border); border-radius: 14px; background: var(--card);
+  transition: .18s; }
+.theme:hover { border-color: var(--border-2); background: var(--card-2); }
+.theme h3 { font-size: 1.08rem; margin: 0 0 8px; color: var(--text); }
+.theme .tnum { font-family: var(--serif); color: var(--accent); font-size: .9rem; }
+.theme p { color: var(--text-2); font-size: .92rem; margin: 0 0 12px; }
+.theme .rep { font-size: .82rem; color: var(--muted); }
+.theme .rep a { font-weight: 500; }
+
+/* publications */
+.pub { padding: 14px 0; border-bottom: 1px solid var(--border); font-size: .96rem; }
+.pub .cite { color: var(--text-2); }
+.pub .cite strong { color: var(--text); font-weight: 700; }
+.pub .cite u { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 2px; }
+.pub .meta { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 9px; align-items: center; }
+.badge { font-size: .74rem; font-weight: 600; padding: 3px 9px; border-radius: 6px;
+  border: 1px solid var(--border-2); color: var(--text-2); background: var(--card); transition: .15s; }
+.badge:hover { color: var(--text); border-color: var(--accent); text-decoration: none; }
+.badge.doi i, .badge.link i { color: var(--accent); }
+.tag { font-size: .7rem; font-weight: 600; letter-spacing: .02em; padding: 2px 8px; border-radius: 999px;
+  color: var(--accent-2); background: var(--accent-dim); border: 1px solid transparent; }
+.star { color: var(--star); margin-right: 7px; }
+.yearhead { font-family: var(--serif); font-size: 1.28rem; color: var(--text); margin: 26px 0 4px;
+  padding-top: 12px; }
+.subhead { font-family: var(--serif); font-size: 1.32rem; margin: 34px 0 6px; color: var(--text);
+  border-top: 2px solid var(--border-2); padding-top: 22px; }
+.subhead .note { font-family: var(--sans); font-size: .8rem; color: var(--muted); font-weight: 400; }
+
+/* filter bar */
+.filterbar { position: sticky; top: 60px; z-index: 20; background: var(--bg);
+  padding: 14px 0 12px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.fbtn { font-size: .82rem; font-weight: 500; padding: 6px 13px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border-2); color: var(--text-2); background: var(--card); transition: .15s; }
+.fbtn:hover { color: var(--text); border-color: var(--accent); }
+.fbtn.on { color: #061019; background: var(--accent); border-color: var(--accent); font-weight: 600; }
+[data-theme="light"] .fbtn.on { color: #fff; }
+.searchbox { margin-left: auto; }
+.searchbox input { background: var(--card); border: 1px solid var(--border-2); color: var(--text);
+  padding: 7px 12px; border-radius: 999px; font-size: .85rem; width: 180px; font-family: var(--sans); }
+.searchbox input:focus { outline: none; border-color: var(--accent); }
+.count { color: var(--muted); font-size: .82rem; margin: 10px 0 0; }
+.pub.hide, .yearhead.hide, .subhead.hide { display: none; }
+
+/* cv */
+.cv-item { display: grid; grid-template-columns: 132px 1fr; gap: 16px; padding: 13px 0;
+  border-bottom: 1px solid var(--border); }
+@media (max-width: 620px){ .cv-item { grid-template-columns: 1fr; gap: 2px; } }
+.cv-when { color: var(--muted); font-size: .86rem; font-variant-numeric: tabular-nums; padding-top: 2px; }
+.cv-what h3 { font-size: 1.02rem; margin: 0 0 2px; color: var(--text); }
+.cv-what .where { color: var(--text-2); font-size: .93rem; }
+.cv-what .desc { color: var(--muted); font-size: .86rem; margin-top: 3px; }
+.cv-list { list-style: none; padding: 0; margin: 0; }
+.cv-list li { padding: 10px 0; border-bottom: 1px solid var(--border); color: var(--text-2); font-size: .94rem; }
+.cv-list li strong { color: var(--text); }
+.patent-id { font-size: .78rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.dlbtn { display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 10px;
+  background: var(--accent); color: #061019; font-weight: 600; font-size: .9rem; border: none; }
+[data-theme="light"] .dlbtn { color: #fff; }
+.dlbtn:hover { text-decoration: none; background: var(--accent-2); transform: translateY(-1px); }
+
+/* footer */
+footer { border-top: 1px solid var(--border); padding: 34px 0 60px; margin-top: 20px; color: var(--muted);
+  font-size: .86rem; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 14px; }
+.foot-links a { color: var(--text-2); font-size: 1.15rem; }
+.foot-links a:hover { color: var(--accent); }
+.notice { background: var(--card); border: 1px solid var(--border-2); border-left: 3px solid var(--accent);
+  border-radius: 8px; padding: 12px 16px; margin: 18px 0; font-size: .86rem; color: var(--text-2); }
+.notice strong { color: var(--text); }
+</style>
+<script>/* theme toggle + publication filtering (standalone, works over file://) */
+(function () {
+  var root = document.documentElement;
+  var KEY = "mdt-theme";
+  function apply(t){ root.setAttribute("data-theme", t);
+    var b=document.getElementById("themebtn"); if(b) b.textContent = (t==="light"?"☾":"☀"); }
+  var saved = "dark";
+  try { saved = localStorage.getItem(KEY) || "dark"; } catch(e){}
+  apply(saved);
+  window.addEventListener("DOMContentLoaded", function () {
+    var b = document.getElementById("themebtn");
+    if (b) b.addEventListener("click", function () {
+      var t = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      apply(t); try { localStorage.setItem(KEY, t); } catch(e){}
+    });
+    // progress bar
+    var pr = document.getElementById("progress");
+    if (pr) window.addEventListener("scroll", function(){
+      var h = document.documentElement, sc = h.scrollTop, mx = h.scrollHeight - h.clientHeight;
+      pr.style.width = (mx>0 ? (sc/mx*100) : 0) + "%";
+    });
+    // publication filters
+    var bar = document.getElementById("filters");
+    if (!bar) return;
+    var current = "all";
+    function run(){
+      var q = (document.getElementById("psearch")||{value:""}).value.toLowerCase().trim();
+      var pubs = document.querySelectorAll(".pub");
+      var shown = 0;
+      pubs.forEach(function(p){
+        var okT = current === "all" || (" "+p.dataset.topics+" ").indexOf(" "+current+" ") >= 0;
+        var okQ = !q || p.textContent.toLowerCase().indexOf(q) >= 0;
+        var vis = okT && okQ;
+        p.classList.toggle("hide", !vis); if (vis) shown++;
+      });
+      // hide empty year/section headers
+      document.querySelectorAll(".yearhead,.subhead").forEach(function(h){
+        var n = h.nextElementSibling, any = false;
+        while (n && !n.classList.contains("yearhead") && !n.classList.contains("subhead")) {
+          if (n.classList.contains("pub") && !n.classList.contains("hide")) { any = true; break; }
+          n = n.nextElementSibling;
+        }
+        h.classList.toggle("hide", !any);
+      });
+      var c = document.getElementById("count");
+      if (c) c.textContent = shown + " publication" + (shown===1?"":"s") + " shown";
+    }
+    bar.addEventListener("click", function(e){
+      var t = e.target.closest(".fbtn"); if (!t) return;
+      current = t.dataset.f;
+      bar.querySelectorAll(".fbtn").forEach(function(x){ x.classList.toggle("on", x===t); });
+      run();
+    });
+    var s = document.getElementById("psearch"); if (s) s.addEventListener("input", run);
+    run();
+  });
+})();
+</script>
+</head>
+<body>
+<div id="progress"></div>
+<nav><div class="wrap">
+<a class="brand" href="index.html">Marcelo&nbsp;D.&nbsp;T.&nbsp;Torres</a>
+<div class="navlinks">
+<a class="active" href="index.html#about">About</a>
+<a class="" href="index.html#research">Research</a>
+<a class="" href="publications.html">Publications</a>
+<a class="" href="cv.html">CV</a>
+<button class="toggle" id="themebtn" aria-label="Toggle theme">☀</button>
+</div></div></nav>
+<div class="wrap">
+<header class="hero" id="about">
+  <div class="hero-grid">
+    <img class="avatar" src="assets/prof_pic.jpg" alt="Marcelo Der Torossian Torres"
+         onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22336%22%20height%3D%22336%22%20viewBox%3D%220%200%20336%20336%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%2316202b%22/%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230c0c0e%22/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Crect%20width%3D%22336%22%20height%3D%22336%22%20fill%3D%22url%28%23g%29%22/%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%235bb2ff%22%20stroke-width%3D%222%22%20opacity%3D%220.55%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22168%22%20cy%3D%22132%22%20r%3D%2246%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M84%20262c0-46%2038-74%2084-74s84%2028%2084%2074%22%20stroke-linecap%3D%22round%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22%235bb2ff%22%20opacity%3D%220.9%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22255%22%20cy%3D%2286%22%20r%3D%224%22/%3E%3Ccircle%20cx%3D%22285%22%20cy%3D%22120%22%20r%3D%224%22/%3E%3Ccircle%20cx%3D%22270%22%20cy%3D%22103%22%20r%3D%224%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M255%2086%20L270%20103%20L285%20120%22%20stroke%3D%22%235bb2ff%22%20stroke-width%3D%221.6%22%20opacity%3D%220.5%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Ctext%20x%3D%22168%22%20y%3D%22312%22%20text-anchor%3D%22middle%22%20font-family%3D%22Spectral%2CGeorgia%2Cserif%22%20font-size%3D%2215%22%0A%20%20%20%20%20%20%20%20fill%3D%22%237d7d88%22%3Eadd%20prof_pic.jpg%3C/text%3E%0A%3C/svg%3E%0A&quot;">
+    <div>
+      <div class="kicker">Peptides · Antibiotics · AI</div>
+      <h1>Marcelo Der Torossian Torres</h1>
+      <div class="role">Research Assistant Professor · University of Pennsylvania</div>
+      <div class="affil">Machine Biology Group · Bioengineering &amp; Psychiatry</div>
+      <div class="bio"><p>I am a Research Assistant Professor at the University of Pennsylvania in the
+<a href="https://delafuentelab.seas.upenn.edu/" target="_blank" rel="noopener">Machine Biology Group</a>,
+working where peptide chemistry, microbiology,
+and artificial intelligence meet. My work designs and discovers new antibiotics to confront the
+global rise of antimicrobial resistance.</p>
+<p>Trained as a synthetic and organic chemist, I pair solid-phase peptide synthesis and
+structure–activity-relationship-guided design with deep learning and generative AI to mine the
+proteomes of living, extinct, and microbial life for encrypted antimicrobial peptides. I also
+engineer peptide chemical modifications for stability and selectivity, and build low-cost
+biosensors for rapid infectious-disease diagnostics.</p></div>
+      <div class="links"><a class="chip" href="mailto:marcelot@upenn.edu"><i class="fa-solid fa-envelope"></i>Email</a><a class="chip" href="https://scholar.google.com/citations?user=N-Z6jh8AAAAJ&hl=en" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i>Google Scholar</a><a class="chip" href="https://orcid.org/0000-0002-6165-9138" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i>ORCID</a><a class="chip" href="https://www.researchgate.net/profile/Marcelo-Torres-8" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i>ResearchGate</a><a class="chip" href="https://www.linkedin.com/in/marcelo-der-torossian-torres-66122622/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a><a class="chip" href="https://github.com/mdttorres" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a><a class="chip" href="https://delafuentelab.seas.upenn.edu/" target="_blank" rel="noopener"><i class="fa-solid fa-flask"></i>Lab website</a><a class="chip" href="https://www.peptaris.com/en" target="_blank" rel="noopener"><i class="fa-solid fa-atom"></i>Peptaris</a><a class="chip" href="https://www.ncbi.nlm.nih.gov/myncbi/marcelo.der%20torossian%20torres.1/bibliography/public/" target="_blank" rel="noopener"><i class="fa-solid fa-dna"></i>NCBI</a></div>
+    </div>
+  </div>
+</header>
+
+<section id="affiliations">
+  <div class="kicker">Affiliations</div>
+  <div class="logos" style="margin-top:14px"><a class="logo" href="https://www.upenn.edu" target="_blank" rel="noopener"><img class="uni-logo" src="assets/logos/upenn.svg" alt="University of Pennsylvania" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2270%22%20height%3D%2240%22%20viewBox%3D%220%200%2070%2040%22%3E%3Ctext%20x%3D%220%22%20y%3D%2229%22%20font-family%3D%22Spectral%2CGeorgia%2Cserif%22%20font-size%3D%2226%22%20font-weight%3D%22600%22%20fill%3D%22%239a9aa4%22%3EPenn%3C/text%3E%3C/svg%3E&quot;"><span><span class="lg-name">University of Pennsylvania</span><br><span class="lg-sub">Research Asst. Professor · current</span></span></a><a class="logo" href="https://www.mit.edu" target="_blank" rel="noopener"><img class="uni-logo" src="assets/logos/mit.svg" alt="Massachusetts Inst. of Technology" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2254%22%20height%3D%2240%22%20viewBox%3D%220%200%2054%2040%22%3E%3Ctext%20x%3D%220%22%20y%3D%2229%22%20font-family%3D%22Spectral%2CGeorgia%2Cserif%22%20font-size%3D%2226%22%20font-weight%3D%22600%22%20fill%3D%22%239a9aa4%22%3EMIT%3C/text%3E%3C/svg%3E&quot;"><span><span class="lg-name">Massachusetts Inst. of Technology</span><br><span class="lg-sub">Visiting PhD · Lu Lab</span></span></a><a class="logo" href="https://www.ufabc.edu.br" target="_blank" rel="noopener"><img class="uni-logo" src="assets/logos/ufabc.svg" alt="Federal University of ABC" onerror="this.onerror=null;this.src=&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2285%22%20height%3D%2240%22%20viewBox%3D%220%200%2085%2040%22%3E%3Ctext%20x%3D%220%22%20y%3D%2229%22%20font-family%3D%22Spectral%2CGeorgia%2Cserif%22%20font-size%3D%2226%22%20font-weight%3D%22600%22%20fill%3D%22%239a9aa4%22%3EUFABC%3C/text%3E%3C/svg%3E&quot;"><span><span class="lg-name">Federal University of ABC</span><br><span class="lg-sub">BSc · MSc · PhD · Brazil</span></span></a><a class="logo peptaris" href="https://www.peptaris.com/en" target="_blank" rel="noopener"><span class="pep-logo"><svg viewBox="0 0 2481 1200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.75,0,0,0.75,0,0)">
+        <g transform="matrix(-4.26316,3.96401,3.96401,4.26316,874.653,1085.34)">
+            <path d="M-27.737,-128.546L6.979,-128.546C6.979,-128.546 23.605,-48.098 77.359,-35.85C53.451,-30.67 2.928,-24.76 -18.867,-60.894C-28.166,-77.897 -29.394,-100.975 -27.737,-128.546" style="fill:rgb(0,182,237);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,379.602,996.498)">
+            <path d="M0,38.978C-3.427,44.012 -8.527,47.701 -14.407,49.285C-43.41,57.099 -65.037,43.847 -65.037,43.847C-65.037,43.847 -30.03,9.522 -5.302,-15.192C0.654,-15.058 5.194,-16.43 8.509,-18.121C11.882,0.1 11.808,21.631 0,38.978" style="fill:rgb(0,182,237);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,784.799,488.444)">
+            <path d="M0,40.829C-2.257,41.413 -5.018,41.913 -8.069,42.007C-12.61,26.273 -23.545,11.749 -35.685,-1.178C-24.528,3.727 -8.618,7.895 8.657,3.512C8.167,13.326 6.181,24.683 1.462,37.009L0,40.829Z" style="fill:rgb(0,182,237);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,1029.29,153.131)">
+            <path d="M0,15.303C-2.353,10.702 -5.349,5.861 -9.03,0.686C-3.803,2.459 4.116,3.211 15.588,0L0,15.303Z" style="fill:rgb(0,182,237);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(-3.49077,4.65858,4.65858,3.49077,1152.09,427.396)">
+            <path d="M9.363,-66.366C9.363,-66.366 24.907,-30.094 73.648,-16.213C55.457,-11.733 36.553,-2.17 9.363,-15.77C-4.234,-23.367 -12.237,-38.833 -18.47,-62.303C-0.807,-64.896 9.363,-66.366 9.363,-66.366" style="fill:rgb(0,182,237);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,925.371,1070.38)">
+            <path d="M0,0.626C2.02,3.136 4.181,4.931 6.482,6.012C8.782,7.093 11.291,7.632 14.011,7.632C18.82,7.632 22.357,6.325 24.623,3.711C26.888,1.098 28.022,-2.997 28.022,-8.575C28.022,-13.871 26.819,-17.897 24.413,-20.651C22.01,-23.404 18.507,-24.781 13.906,-24.781C11.187,-24.781 8.66,-24.222 6.325,-23.108C3.989,-21.993 1.881,-20.215 0,-17.775L0,0.626ZM-3.451,-37.329L-1.464,-31.369C0.557,-33.319 3.031,-34.976 5.959,-36.335C8.888,-37.694 12.443,-38.374 16.624,-38.374C25.407,-38.374 32.115,-35.812 36.752,-30.689C41.386,-25.565 43.705,-18.194 43.705,-8.575C43.705,1.186 41.457,8.592 36.961,13.644C32.466,18.698 25.894,21.225 17.251,21.225C13.487,21.225 10.193,20.666 7.371,19.551C4.548,18.437 2.091,17.078 0,15.474L0,39L-15.475,39L-15.475,-37.329L-3.451,-37.329Z" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,1450.64,1052.11)">
+            <path d="M0,-10.873C-0.14,-14.568 -1.359,-17.461 -3.659,-19.551C-5.959,-21.643 -9.097,-22.688 -13.069,-22.688C-20.597,-22.688 -24.989,-18.749 -26.244,-10.873L0,-10.873ZM-12.652,24.363C-22.271,24.363 -29.626,21.8 -34.714,16.677C-39.802,11.554 -42.346,4.149 -42.346,-5.54C-42.346,-15.161 -39.837,-22.513 -34.817,-27.603C-29.799,-32.691 -22.62,-35.236 -13.278,-35.236C-4.566,-35.236 2.196,-33.075 7.006,-28.753C11.815,-24.429 14.393,-18.331 14.744,-10.455C14.812,-8.642 14.812,-6.988 14.744,-5.488C14.673,-3.989 14.568,-2.682 14.429,-1.568L-26.454,-1.568C-25.547,7.286 -20.877,11.711 -12.443,11.711C-6.309,11.711 -2.509,9.411 -1.045,4.81L14.011,4.81C11.362,17.846 2.474,24.363 -12.652,24.363" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,1669.76,1070.38)">
+            <path d="M0,0.626C2.02,3.136 4.181,4.931 6.482,6.012C8.782,7.093 11.291,7.632 14.011,7.632C18.82,7.632 22.357,6.325 24.623,3.711C26.888,1.098 28.022,-2.997 28.022,-8.575C28.022,-13.871 26.819,-17.897 24.413,-20.651C22.01,-23.404 18.507,-24.781 13.906,-24.781C11.187,-24.781 8.66,-24.222 6.325,-23.108C3.989,-21.993 1.881,-20.215 0,-17.775L0,0.626ZM-3.451,-37.329L-1.464,-31.369C0.557,-33.319 3.031,-34.976 5.959,-36.335C8.888,-37.694 12.443,-38.374 16.624,-38.374C25.408,-38.374 32.115,-35.812 36.752,-30.689C41.386,-25.565 43.705,-18.194 43.705,-8.575C43.705,1.186 41.457,8.592 36.961,13.644C32.466,18.698 25.894,21.225 17.251,21.225C13.487,21.225 10.193,20.666 7.371,19.551C4.548,18.437 2.091,17.078 0,15.474L0,39L-15.475,39L-15.475,-37.329L-3.451,-37.329Z" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,2069.65,892.032)">
+            <path d="M0,28.963C0,32.241 0.695,34.593 2.091,36.021C3.484,37.451 5.751,38.164 8.888,38.164C10.281,38.164 11.606,38.13 12.861,38.06C14.115,37.991 15.23,37.887 16.207,37.747L16.207,51.13C15.788,51.198 15.161,51.286 14.324,51.391C13.489,51.495 12.564,51.582 11.554,51.652C10.542,51.722 9.531,51.773 8.521,51.81C7.51,51.843 6.588,51.861 5.751,51.861C-8.401,51.861 -15.475,45.519 -15.475,32.831L-15.475,4.496L-25.513,4.496L-25.513,-6.692L-15.475,-6.692L-15.475,-19.552L0,-22.898L0,-6.692L15.788,-6.692L15.788,4.496L0,4.496L0,28.963Z" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,2403.8,989.016)">
+            <path d="M0,10.84L-13.174,10.84C-15.545,10.84 -17.409,11.433 -18.768,12.616C-20.127,13.803 -20.806,15.405 -20.806,17.426C-20.806,19.449 -20.075,21.033 -18.612,22.183C-17.148,23.335 -15.126,23.909 -12.547,23.909C-9.619,23.909 -7.041,23.161 -4.81,21.661C-2.58,20.163 -0.977,18.194 0,15.754L0,10.84ZM-36.491,18.263C-36.491,13.176 -34.871,9.202 -31.629,6.343C-28.388,3.486 -23.839,2.056 -17.984,2.056L0,2.056L0,-2.858C0,-8.853 -3.382,-11.849 -10.143,-11.849C-13.419,-11.849 -15.859,-11.31 -17.461,-10.229C-19.065,-9.148 -19.971,-7.527 -20.18,-5.367L-34.923,-5.367C-34.784,-11.64 -32.554,-16.38 -28.231,-19.588C-23.91,-22.793 -17.637,-24.361 -9.41,-24.293C-5.646,-24.293 -2.248,-23.856 0.785,-22.986C3.816,-22.113 6.43,-20.895 8.626,-19.326C10.822,-17.758 12.51,-15.875 13.698,-13.68C14.881,-11.484 15.475,-9.062 15.475,-6.413L15.475,34.155L3.242,34.155L0.941,27.464C-2.893,32.623 -8.714,35.201 -16.52,35.201C-22.655,35.201 -27.517,33.685 -31.107,30.654C-34.698,27.621 -36.491,23.49 -36.491,18.263" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,2539.53,1181.76)">
+            <path d="M0,-56.462L12.548,-56.462L14.952,-49.457C19.064,-54.823 24.536,-57.507 31.368,-57.507C31.786,-57.507 32.362,-57.489 33.093,-57.455C33.825,-57.419 34.4,-57.333 34.819,-57.194L34.819,-42.66C34.259,-42.798 33.493,-42.903 32.518,-42.973C31.541,-43.042 30.704,-43.078 30.009,-43.078C25.338,-43.078 21.749,-41.735 19.24,-39.053C16.729,-36.368 15.475,-32.447 15.475,-27.29L15.475,1.045L0,1.045L0,-56.462Z" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,-53.3025,-2950.33)">
+            <path d="M486.911,653.357L502.386,653.357L502.386,710.864L486.911,710.864L486.911,653.357ZM485.447,638.51C485.447,636 486.266,633.997 487.905,632.497C489.541,630.999 491.722,630.25 494.44,630.25C497.296,630.25 499.563,630.999 501.235,632.497C502.909,633.997 503.746,636 503.746,638.51C503.746,640.95 502.909,642.937 501.235,644.47C499.563,646.003 497.296,646.77 494.44,646.77C491.722,646.77 489.541,646.021 487.905,644.522C486.266,643.023 485.447,641.019 485.447,638.51" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,3212.1,953.506)">
+            <path d="M0,23.004C0,28.859 -2.232,33.373 -6.692,36.545C-11.154,39.717 -17.498,41.301 -25.722,41.301C-29.695,41.301 -33.268,40.847 -36.439,39.942C-39.612,39.038 -42.278,37.712 -44.438,35.969C-46.599,34.227 -48.238,32.137 -49.352,29.696C-50.467,27.256 -50.956,24.538 -50.815,21.54L-36.596,21.54C-36.596,23.981 -35.586,25.897 -33.564,27.29C-31.542,28.686 -28.686,29.381 -24.989,29.381C-18.577,29.243 -15.37,27.361 -15.37,23.736C-15.37,22.063 -16.155,20.808 -17.723,19.971C-19.292,19.134 -22.027,18.577 -25.931,18.299C-29.277,18.021 -32.431,17.585 -35.393,16.992C-38.357,16.4 -40.954,15.46 -43.183,14.168C-45.415,12.88 -47.192,11.12 -48.515,8.888C-49.84,6.659 -50.502,3.731 -50.502,0.106C-50.502,-5.609 -48.358,-10.106 -44.071,-13.383C-39.785,-16.659 -33.738,-18.297 -25.931,-18.297C-18.124,-18.297 -12.06,-16.729 -7.738,-13.592C-3.417,-10.456 -1.082,-5.749 -0.732,0.524L-14.952,0.524C-15.579,-4.216 -19.17,-6.515 -25.722,-6.377C-28.58,-6.377 -30.828,-5.803 -32.466,-4.651C-34.105,-3.501 -34.923,-1.987 -34.923,-0.104C-34.923,1.919 -34.086,3.417 -32.414,4.392C-30.74,5.369 -27.745,6.066 -23.421,6.484C-20.284,6.763 -17.289,7.181 -14.429,7.738C-11.573,8.296 -9.081,9.168 -6.953,10.352C-4.828,11.538 -3.137,13.122 -1.883,15.109C-0.628,17.096 0,19.727 0,23.004" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(5.82133,0,0,5.82133,3293.19,1156.06)">
+            <path d="M0,4.82L-0.177,1.985C-0.195,1.613 -0.195,1.152 -0.212,0.639L-0.265,0.639C-0.39,1.063 -0.55,1.63 -0.674,2.073L-1.541,4.749L-2.534,4.749L-3.402,2.002C-3.49,1.649 -3.633,1.063 -3.738,0.639L-3.792,0.639C-3.792,1.082 -3.809,1.542 -3.828,1.985L-4.005,4.82L-4.926,4.82L-4.572,0L-3.137,0L-2.304,2.357C-2.18,2.729 -2.108,3.083 -1.984,3.579L-1.966,3.579C-1.842,3.154 -1.737,2.729 -1.63,2.392L-0.798,0L0.584,0L0.957,4.82L0,4.82ZM-5.21,0L-5.21,0.797L-6.751,0.797L-6.751,4.82L-7.707,4.82L-7.707,0.797L-9.232,0.797L-9.232,0L-5.21,0Z" style="fill:currentColor;fill-rule:nonzero;"/>
+        </g>
+    </g>
+</svg>
+</span><span><span class="lg-sub">Co-founder · company</span></span></a></div>
+</section>
+
+<section id="news">
+  <div class="sec-head"><h2>News</h2></div>
+  <div class="news"><div class="news-item"><div class="news-date">Dec 2025</div><div class="news-body">Began as <strong>Research Assistant Professor</strong> at the University of Pennsylvania (Depts. of Bioengineering &amp; Psychiatry).</div></div><div class="news-item"><div class="news-date">2026</div><div class="news-body"><em>A generative artificial intelligence approach for antibiotic optimization</em> published in <strong>Nature Machine Intelligence</strong>.</div></div><div class="news-item"><div class="news-date">2026</div><div class="news-body"><em>Deep learning reveals antimicrobial peptides within prions</em> published in <strong>Nature Microbiology</strong>.</div></div><div class="news-item"><div class="news-date">2025</div><div class="news-body"><em>Discovery of antibiotics in the archaeome using deep learning</em> published in <strong>Nature Microbiology</strong>.</div></div><div class="news-item"><div class="news-date">2024</div><div class="news-body">Two <strong>Cell</strong> papers mine the human gut and the global microbiome for new peptide antibiotics.</div></div></div>
+</section>
+
+<section id="research">
+  <div class="sec-head"><h2>Research</h2><a class="more" href="publications.html">All publications →</a></div>
+  <div class="themes"><div class="theme"><div class="tnum">01</div><h3>Antimicrobial peptides &amp; SAR-guided design</h3><p>Dissecting how physicochemical and structural descriptors — charge, hydrophobicity, amphipathicity, helicity — govern the activity, selectivity, and stability of cationic antimicrobial peptides, and using those rules to redesign natural toxins (decoralin, polybia-CP, VmCT1, mastoparans) into potent, non-toxic synthetic therapeutics.</p><div class="rep">Representative: <a href="https://doi.org/10.1038/s42003-018-0224-2" target="_blank" rel="noopener">Structure-function-guided exploration of Polybia-CP</a></div></div><div class="theme"><div class="tnum">02</div><h3>AI &amp; deep learning for antibiotic discovery</h3><p>Building computational and generative-AI pipelines — pattern recognition, genetic algorithms, deep learning, and diffusion/Bayesian models — to uncover encrypted antibiotics across the tree of life: the human proteome, extinct organisms (molecular de-extinction), the archaeome, and the global microbiome.</p><div class="rep">Representative: <a href="https://doi.org/10.1038/s41551-021-00801-1" target="_blank" rel="noopener">Mining the human proteome (Nature Biomed. Eng.)</a></div></div><div class="theme"><div class="tnum">03</div><h3>Peptide chemical modification</h3><p>Expanding peptide chemical space with cyclization, disulfide and lactam bridges, non-canonical residues, backbone and terminal modifications, and computationally designed pore-forming scaffolds — tuning proteolytic stability, membrane selectivity, and function.</p><div class="rep">Representative: <a href="https://doi.org/10.1038/s42003-023-05254-7" target="_blank" rel="noopener">Molecular hybridization for tuning peptide function</a></div></div><div class="theme"><div class="tnum">04</div><h3>Low-cost biosensors &amp; diagnostics</h3><p>Designing inexpensive electrochemical and colorimetric biosensors that detect bacterial and viral pathogens in minutes at the point of care — from pencil-graphite SARS-CoV-2 tests to paper-based devices for antibiotic-resistant bacteria.</p><div class="rep">Representative: <a href="https://doi.org/10.1073/pnas.2106724118" target="_blank" rel="noopener">Minute-scale SARS-CoV-2 detection (PNAS)</a></div></div></div>
+</section>
+
+<section id="selected">
+  <div class="sec-head"><h2>Selected publications</h2><a class="more" href="publications.html">Full list (98) →</a></div>
+  <div class="pub" data-topics="ai amp" data-year="2026"><div class="cite"><span class="star" title="Selected publication">★</span><strong><u>Torres, MDT</u></strong>; Wan, F; de la Fuente-Nunez, C. Deep learning reveals antimicrobial peptides within prions. Nature Microbiology, 2026.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1038/s41564-026-02408-1" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span><span class="tag">AMP design & SAR</span></div></div><div class="pub" data-topics="ai" data-year="2026"><div class="cite"><span class="star" title="Selected publication">★</span><strong><u>Torres, MDT</u></strong>; Zeng, Y; Wan, F; Maus, N; Gardner, J; de la Fuente-Nunez, C. A generative artificial intelligence approach for antibiotic optimization. Nature Machine Intelligence, v. 8, p. 841-856, 2026.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1038/s42256-026-01237-5" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span></div></div><div class="pub" data-topics="ai" data-year="2025"><div class="cite"><span class="star" title="Selected publication">★</span><strong><u>Torres, MDT</u></strong>; Wan, F; de la Fuente-Nunez, C. Discovery of antibiotics in the archaeome using deep learning. Nature Microbiology, 10, 2153-2167, 2025. In Press.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1038/s41564-025-02061-0" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span></div></div><div class="pub" data-topics="ai amp" data-year="2024"><div class="cite"><span class="star" title="Selected publication">★</span><strong><u>Torres, MDT</u></strong>; Brooks, E; Cesaro, A; Sberro, H; Nicolaou, C; Bhatt, AS; de la Fuente-Nunez, C. Human gut metagenomic mining reveals an untapped source of peptide antibiotics. Cell, v. 187, i. 19, p. 5453-5467.E152024.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1016/j.cell.2024.07.027" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span><span class="tag">AMP design & SAR</span></div></div><div class="pub" data-topics="ai" data-year="2024"><div class="cite"><span class="star" title="Selected publication">★</span>Santos-Junior, CD; <strong><u>Torres, MDT</u></strong>; Duas, Y; del Rio, AR; Schmidt, TSB; Chong, H; Fullam, A; Kuhn, M; Zhu, C; Houseman, A; Somborski, J; Vines, A; Zhao, XM; Bork, P; Huerta-Cepas, J; de la Fuente-Nunez, C, Coelho, LP. Computational exploration of the global microbiome for antibiotic discovery. Cell, v. 187, i. 14, p. 3761-3778.E16, 2024.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1016/j.cell.2024.05.013" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span></div></div><div class="pub" data-topics="ai" data-year="2024"><div class="cite"><span class="star" title="Selected publication">★</span>Wan, F; <strong><u>Torres, MDT</u></strong>; Peng, J, de la Fuente-Nunez, C. Molecular de-extinction of antibiotics enabled by deep learning. Nature Biomedical Engineering, v.8, i. 7, p. 854-871, 2024.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1038/s41551-024-01201-x" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span></div></div><div class="pub" data-topics="ai amp" data-year="2022"><div class="cite"><span class="star" title="Selected publication">★</span><strong><u>Torres, MDT</u></strong>; Melo, MCR; Flowers, L; Crescenzi, O; Notomista, E; de la Fuente-Nunez, C. Mining for encrypted peptide antibiotics in the human proteome. Nature Biomedical Engineering, v. 6, i. 1, p. 67-75, 2022.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1038/s41551-021-00801-1" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AI & deep learning</span><span class="tag">AMP design & SAR</span></div></div><div class="pub" data-topics="amp" data-year="2020"><div class="cite"><span class="star" title="Selected publication">★</span>Silva, ON; <strong><u>Torres, MDT</u></strong>; Cao, J; Alves, ESF; Rodrigues, LV; Resende, JM; Lião, LM; Porto, WF; Fensterseifer, ICM; Lu, TK; Franco, OL; de la Fuente-Nunez, C. Repurposing a peptide toxin from wasp venom into anti-infectives with dual antimicrobial and immunomodulatory properties. Proceedings of the National Academy of Sciences of the United States of America, v. 117, i. 43, p. 26936-26945, 2020.</div><div class="meta"><a class="badge doi" href="https://doi.org/10.1073/pnas.2012379117" target="_blank" rel="noopener"><i class="fa-solid fa-link"></i> DOI</a><span class="tag">AMP design & SAR</span></div></div>
+</section>
+</div>
+<footer><div class="wrap">
+<div class="foot-links"><a href="mailto:marcelot@upenn.edu" title="Email"><i class="fa-solid fa-envelope"></i></a><a href="https://scholar.google.com/citations?user=N-Z6jh8AAAAJ&hl=en" target="_blank" rel="noopener" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a><a href="https://orcid.org/0000-0002-6165-9138" target="_blank" rel="noopener" title="ORCID"><i class="fa-brands fa-orcid"></i></a><a href="https://www.researchgate.net/profile/Marcelo-Torres-8" target="_blank" rel="noopener" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a><a href="https://www.linkedin.com/in/marcelo-der-torossian-torres-66122622/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a><a href="https://github.com/mdttorres" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a><a href="https://delafuentelab.seas.upenn.edu/" target="_blank" rel="noopener" title="Lab website"><i class="fa-solid fa-flask"></i></a><a href="https://www.peptaris.com/en" target="_blank" rel="noopener" title="Peptaris"><i class="fa-solid fa-atom"></i></a><a href="https://www.ncbi.nlm.nih.gov/myncbi/marcelo.der%20torossian%20torres.1/bibliography/public/" target="_blank" rel="noopener" title="NCBI"><i class="fa-solid fa-dna"></i></a></div>
+<div>© 2026 Marcelo Der Torossian Torres · Research Assistant Professor, University of Pennsylvania.</div>
+
+</div></footer>
+</body></html>
