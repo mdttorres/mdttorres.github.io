@@ -1,221 +1,312 @@
 {
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Marcelo Der Torossian Torres",
+    "label": "Research Assistant Professor · Peptides, Antibiotics & AI",
     "image": "",
-    "email": "einstein@example.com",
-    "phone": "(912) 123-4567",
-    "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
+    "email": "marcelot@upenn.edu",
+    "phone": "+1-267-881-2005",
+    "url": "https://mdttorres.github.io",
+    "summary": "Research Assistant Professor at the University of Pennsylvania (Machine Biology Group). Peptide chemistry, structure-activity-guided antimicrobial peptide design, AI/deep-learning antibiotic discovery, peptide chemical modification, and low-cost biosensors.",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "Edward J. Stemmler Hall, 3450 Hamilton Walk",
+      "city": "Philadelphia",
+      "region": "PA",
+      "postalCode": "19104",
+      "countryCode": "US"
     },
-    "profiles": []
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "Marcelo D. T. Torres",
+        "url": "https://scholar.google.com/citations?user=N-Z6jh8AAAAJ&hl=en"
+      },
+      {
+        "network": "ORCID",
+        "username": "0000-0002-6165-9138",
+        "url": "https://orcid.org/0000-0002-6165-9138"
+      },
+      {
+        "network": "NCBI",
+        "username": "Bibliography",
+        "url": "https://www.ncbi.nlm.nih.gov/myncbi/marcelo.der%20torossian%20torres.1/bibliography/public/"
+      }
+    ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Princeton University, NJ",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity", "Description 2."]
+      "name": "University of Pennsylvania",
+      "position": "Research Assistant Professor",
+      "startDate": "2025",
+      "endDate": "",
+      "summary": "Departments of Bioengineering and Psychiatry, Perelman School of Medicine."
     },
     {
-      "name": "California Institute of Technology",
-      "position": "Visiting Professor",
-      "location": "Pasadena, California, US",
-      "startDate": "1933-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": ["Description 1.", "Description 2."]
+      "name": "University of Pennsylvania",
+      "position": "Research Associate",
+      "startDate": "2024",
+      "endDate": "2025",
+      "summary": "Machine Biology Group — AI-driven peptide discovery, nanomaterials, biosensors."
     },
     {
-      "name": "Kaiser Wilhelm Institute for Physics",
-      "position": "Director",
-      "location": "Berlin, Germany",
-      "startDate": "1917-01-01",
-      "endDate": "1933-01-01",
-      "summary": "",
-      "highlights": []
+      "name": "University of Pennsylvania",
+      "position": "Postdoctoral Researcher",
+      "startDate": "2019",
+      "endDate": "2024",
+      "summary": "Machine Biology Group — computational and experimental antibiotic discovery."
     },
     {
-      "name": "Karl-Ferdinand University",
-      "position": "Professor of Theoretical Physics",
-      "location": "Prague, Czechoslovakia",
-      "startDate": "1911-01-01",
-      "endDate": "1917-01-01",
-      "summary": "",
-      "highlights": []
-    },
-    {
-      "name": "University of Zurich",
-      "position": "Associate Professor of Theoretical Physics",
-      "location": "Zurich, Switzerland",
-      "startDate": "1909-01-01",
-      "endDate": "1911-01-01",
-      "summary": "",
-      "highlights": []
-    }
-  ],
-  "volunteer": [
-    {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "name": "IQOG–CSIC, Spain",
+      "position": "Visiting Postdoctoral Researcher",
+      "startDate": "2018",
+      "endDate": "2018",
+      "summary": "MIT–Spain Joint Program."
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich",
-      "location": "Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Physics",
-      "studyType": "PhD",
-      "startDate": "1900-01-01",
-      "endDate": "1905-01-01",
-      "score": "",
-      "courses": ["Theory of Relativity"],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Federal University of ABC (UFABC), Brazil",
+      "area": "Chemistry",
+      "studyType": "Ph.D., Science & Technology",
+      "startDate": "2013",
+      "endDate": "2018",
+      "note": "Thesis: Biological Applications of New Antimicrobial Peptides"
     },
     {
-      "institution": "Eidgenössische Technische Hochschule",
-      "location": "Zurich, Switzerland",
-      "area": "Physics",
-      "studyType": "Federal teaching diploma",
-      "startDate": "1896-01-01",
-      "endDate": "1900-01-01",
-      "score": "",
-      "courses": [],
-      "highlights": ["Description 1.", "Description 2."]
+      "institution": "Massachusetts Institute of Technology",
+      "area": "Biological Engineering",
+      "studyType": "Visiting Ph.D. Student",
+      "startDate": "2017",
+      "endDate": "2018",
+      "note": "Lu Lab"
+    },
+    {
+      "institution": "Federal University of ABC (UFABC), Brazil",
+      "area": "Chemistry",
+      "studyType": "M.Sc., Science & Technology",
+      "startDate": "2011",
+      "endDate": "2013",
+      "note": "Dissertation: Antimalarial Cyclic Derivatives of Angiotensin II"
+    },
+    {
+      "institution": "Federal University of ABC (UFABC), Brazil",
+      "area": "Chemistry",
+      "studyType": "B.S.",
+      "startDate": "2008",
+      "endDate": "2011",
+      "note": ""
+    },
+    {
+      "institution": "Federal University of ABC (UFABC), Brazil",
+      "area": "Science & Technology",
+      "studyType": "B.S.",
+      "startDate": "2008",
+      "endDate": "2010",
+      "note": ""
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Brazilian Society for Biological Chemistry and Medicinal Chemistry Award for the best research project during the 41st Annual Meeting of the Brazilian Chemical Society",
+      "date": "2018",
+      "awarder": ""
     },
     {
-      "title": "Max Planck Medal",
-      "date": "2029-01-01",
-      "awarder": "German Physical Society",
-      "summary": ""
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-location-dot"
+      "title": "22nd Young Talent Award in Life Sciences, Brazilian Society for Biochemistry and Molecular Biology",
+      "date": "2018",
+      "awarder": ""
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-tag"
+      "title": "Travel Grant Award of European Peptide Society, European Peptide Society",
+      "date": "2016",
+      "awarder": ""
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "icon": "fa-solid fa-envelope"
+      "title": "Academic Excellence Award of the Federal University of ABC, Brazil",
+      "date": "2015",
+      "awarder": ""
+    },
+    {
+      "title": "Travel Grant Award of American Peptide Society, American Peptide Society",
+      "date": "2015",
+      "awarder": ""
+    },
+    {
+      "title": "Brazilian Society for Biochemistry and Molecular Biology Award for the best work during the XL Annual Meeting of the Brazilian Biochemistry and Molecular Biology Society",
+      "date": "2011",
+      "awarder": ""
+    },
+    {
+      "title": "São Paulo Research Foundation (FAPESP):",
+      "date": "",
+      "awarder": "Fellowship"
+    },
+    {
+      "title": "2014-2018: Structure-activity relationship-guided design of antimicrobial peptides (#2014/04507-5 and #2016/24413-0)",
+      "date": "",
+      "awarder": "Fellowship"
+    },
+    {
+      "title": "2011-2013: Angiotensin-II cyclic derivatives with selective anti-plasmodial activity and high resistance to degradation (#2011/15083-3)",
+      "date": "",
+      "awarder": "Fellowship"
+    },
+    {
+      "title": "Brazilian National Council for Scientific and Technological Development (CNPq):",
+      "date": "",
+      "awarder": "Fellowship"
+    },
+    {
+      "title": "2008-2011: Design of cyclic peptides for improved anti-plasmodial activity.",
+      "date": "",
+      "awarder": "Fellowship"
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrodynamik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "name": "Deep learning reveals antimicrobial peptides within prions",
+      "publisher": "Nature Microbiology",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.1038/s41564-026-02408-1"
     },
     {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
+      "name": "A generative artificial intelligence approach for antibiotic optimization",
+      "publisher": "Nature Machine Intelligence",
+      "releaseDate": "2026",
+      "url": "https://doi.org/10.1038/s42256-026-01237-5"
     },
     {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
-    }
-  ],
-  "skills": [
-    {
-      "name": "Physics",
-      "level": "Master",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "German",
-      "fluency": "Native speaker",
-      "icon": ""
+      "name": "Discovery of antibiotics in the archaeome using deep learning",
+      "publisher": "Nature Microbiology",
+      "releaseDate": "2025",
+      "url": "https://doi.org/10.1038/s41564-025-02061-0"
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
-      "icon": ""
-    }
-  ],
-  "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
+      "name": "Human gut metagenomic mining reveals an untapped source of peptide antibiotics",
+      "publisher": "Cell",
+      "releaseDate": "2024",
+      "url": "https://doi.org/10.1016/j.cell.2024.07.027"
     },
     {
-      "name": "Professor Jane Smith",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit."
+      "name": "Computational exploration of the global microbiome for antibiotic discovery",
+      "publisher": "Cell",
+      "releaseDate": "2024",
+      "url": "https://doi.org/10.1016/j.cell.2024.05.013"
+    },
+    {
+      "name": "Molecular de-extinction of antibiotics enabled by deep learning",
+      "publisher": "Nature Biomedical Engineering",
+      "releaseDate": "2024",
+      "url": "https://doi.org/10.1038/s41551-024-01201-x"
+    },
+    {
+      "name": "Mining for encrypted peptide antibiotics in the human proteome",
+      "publisher": "Nature Biomedical Engineering",
+      "releaseDate": "2022",
+      "url": "https://doi.org/10.1038/s41551-021-00801-1"
+    },
+    {
+      "name": "Repurposing a peptide toxin from wasp venom into anti-infectives with dual antimicrobial and immunomodulatory properties",
+      "publisher": "Proceedings of the National Academy of Sciences of the United States of America",
+      "releaseDate": "2020",
+      "url": "https://doi.org/10.1073/pnas.2012379117"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01"
+      "name": "de la Fuente-Nunez, C; Torres, MDT; de Lima, LF; Ferreira, AL; Araujo, WR. Color: A low-cost optodiagnostic for sars-cov-2. US20240192214A1. Date: 6/13/2024.",
+      "type": "patent",
+      "keywords": [
+        "US20240192214A1"
+      ]
+    },
+    {
+      "name": "Torres, MDT; de la Fuente-Nunez, C; Cesaro, A; Arciello, A. Hidden antibiotics in the human proteome. US20240067685A1. Date: 2/29/2024.",
+      "type": "patent",
+      "keywords": [
+        "US20240067685A1"
+      ]
+    },
+    {
+      "name": "de la Fuente-Nunez, C; Torres, MDT; Araujo, WR. Low-cost rapid diagnostic biosensors. US20230243818A1, registered by the United States Patent and Trademark Office. Date: 8/3/2023.",
+      "type": "patent",
+      "keywords": [
+        "US20230243818A1"
+      ]
+    },
+    {
+      "name": "Torres, MDT; Silva, GGO; Franco, OL; de la Fuente-Nunez, C. Antimicrobial Peptides. US20230086360A1, registered by United States Patent and Trademark Office. Date: 3/23/2023.",
+      "type": "patent",
+      "keywords": [
+        "US20230086360A1"
+      ]
+    },
+    {
+      "name": "Torres, MDT; Franco, OL; de la Fuente-Nunez, C. Antimicrobial and antibiofilm peptide sequences with metal-binding motifs. US20220064219A1, registered by United States Patent and Trademark Office. Date: 3/3/2022.",
+      "type": "patent",
+      "keywords": [
+        "US20220064219A1"
+      ]
+    },
+    {
+      "name": "Torres, MDT; Oliveira Jr, VX; de la Fuente-Nunez, C; Lu, TK. Methods of physicochemical-guided peptide design and novel peptides derived therefrom. US20210347823. Date: 11/11/2021.",
+      "type": "patent",
+      "keywords": [
+        "US20210347823"
+      ]
     }
-  ]
+  ],
+  "skills": [
+    {
+      "name": "Peptide science",
+      "keywords": [
+        "Solid-phase peptide synthesis",
+        "SAR-guided design",
+        "Cyclization / constrained peptides",
+        "Chemical modification"
+      ]
+    },
+    {
+      "name": "Computation & AI",
+      "keywords": [
+        "Deep learning",
+        "Generative AI",
+        "Genome/proteome mining",
+        "Molecular dynamics"
+      ]
+    },
+    {
+      "name": "Microbiology & assays",
+      "keywords": [
+        "Antimicrobial testing",
+        "Anti-infective mouse models",
+        "Biofilm assays"
+      ]
+    },
+    {
+      "name": "Diagnostics",
+      "keywords": [
+        "Electrochemical biosensors",
+        "Colorimetric sensors",
+        "Point-of-care detection"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Research interests",
+      "keywords": [
+        "Antimicrobial peptides",
+        "Antibiotic discovery",
+        "Structure-activity relationships",
+        "Organic synthesis",
+        "Biophysical & physicochemical properties of biomolecules",
+        "Biological sensors"
+      ]
+    }
+  ],
+  "meta": {
+    "note": "Selected publications shown; full list of 98 articles on the Publications page.",
+    "theme": "even"
+  }
 }
