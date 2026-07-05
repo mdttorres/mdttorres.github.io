@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="336" height="336" viewBox="0 0 336 336">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16202b"/><stop offset="1" stop-color="#0c0c0e"/>
+    </linearGradient>
+  </defs>
+  <rect width="336" height="336" fill="url(#g)"/>
+  <g fill="none" stroke="#5bb2ff" stroke-width="2" opacity="0.55">
+    <circle cx="168" cy="132" r="46"/>
+    <path d="M84 262c0-46 38-74 84-74s84 28 84 74" stroke-linecap="round"/>
+  </g>
+  <g fill="#5bb2ff" opacity="0.9">
+    <circle cx="255" cy="86" r="4"/><circle cx="285" cy="120" r="4"/><circle cx="270" cy="103" r="4"/>
+    <path d="M255 86 L270 103 L285 120" stroke="#5bb2ff" stroke-width="1.6" opacity="0.5"/>
+  </g>
+  <text x="168" y="312" text-anchor="middle" font-family="Spectral,Georgia,serif" font-size="15"
+        fill="#7d7d88">add prof_pic.jpg</text>
+</svg>
